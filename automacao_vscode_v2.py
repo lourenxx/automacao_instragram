@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 import time
 import pandas as pd
-from recursos_externos import senha, contas, mensagem # INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
+from recursos_externos import senha, contas, mensagem, usuario# INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
 
 servico = Service(ChromeDriverManager().install())
 navegador = webdriver.Chrome(service=servico)
@@ -15,7 +15,7 @@ time.sleep(2)
 
 
 # FAZ O LOGIN
-navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys()
+navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys(usuario)
 time.sleep(2)
 
 navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys(senha)
