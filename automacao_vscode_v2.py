@@ -3,7 +3,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 import time
-import pandas as pd
+from openpyxl import Workbook, load_workbook
 from recursos_externos import senha, contas, mensagem, usuario# INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
 
 servico = Service(ChromeDriverManager().install())
@@ -77,7 +77,7 @@ def enviar_mensagem(mensagem):
 
 
 # LOOP PARA BUSCAR AS RESPECTIVAS CONTAS E MENSAGEM
-for conta in contas:
+for conta in (contas["perfil"]):    
     buscar_conta(conta)
     enviar_mensagem(mensagem)
 
