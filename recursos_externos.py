@@ -6,5 +6,5 @@ mensagem = """Olá, bom dia! Sou Guilherme Pexirile Lourenço da Colleman The Wo
 
 
 
-contas = []
+contas = pd.read_excel("contas.xlsx")
 
