@@ -1,3 +1,5 @@
+import pandas as pd
+
 # Informações de Login
 senha = 'JSA18012007'
 usuario = 'metamorfoseducacao'
