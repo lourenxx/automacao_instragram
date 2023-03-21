@@ -14,7 +14,7 @@ time.sleep(2)
 
 
 # FAZ O LOGIN
-navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys('metamorfoseducacao')
+navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[1]/div/label/input').send_keys()
 time.sleep(2)
 
 navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys(senha)
