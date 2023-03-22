@@ -13,7 +13,7 @@ navegador.maximize_window()
 navegador.get("https://www.instagram.com/")
 time.sleep(2)
 
-
+# REALIZA O LOGIN DA CONTA
 def faz_login():
     campo_pesquisa = navegador.find_element('xpath', '//*[@id="loginForm"]/div[1]/div[1]/div/label/input')
     campo_pesquisa.send_keys(usuario)
