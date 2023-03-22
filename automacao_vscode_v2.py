@@ -15,7 +15,7 @@ navegador.get("https://www.instagram.com/")
 time.sleep(2)
 
 # REALIZA O LOGIN DA CONTA
-def faz_login():
+def faz_login(usuario, senha):
     campo_pesquisa = navegador.find_element('xpath', '//*[@id="loginForm"]/div[1]/div[1]/div/label/input')
     campo_pesquisa.send_keys(usuario)
     time.sleep(2)
@@ -83,11 +83,10 @@ def enviar_mensagem(mensagem):
     time.sleep(2)
 
 
+faz_login(usuario, senha)
+diz_nao()
+
 # LOOP PARA BUSCAR AS RESPECTIVAS CONTAS E MENSAGEM
 for conta in aba_ativa["A"]:
     buscar_conta(conta)
     enviar_mensagem(mensagem)
-
-
-
-
