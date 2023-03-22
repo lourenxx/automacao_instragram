@@ -14,15 +14,18 @@ navegador.get("https://www.instagram.com/")
 time.sleep(2)
 
 
-# FAZ O LOGIN
-navegador.find_element('xpath', '//*[@id="loginForm"]/div[1]/div[1]/div/label/input').send_keys(usuario)
-time.sleep(2)
+def faz_login():
+    campo_pesquisa = navegador.find_element('xpath', '//*[@id="loginForm"]/div[1]/div[1]/div/label/input')
+    campo_pesquisa.send_keys(usuario)
+    time.sleep(2)
 
-navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[2]/div/label/input').send_keys(senha)
-time.sleep(2)
+    campo_senha = navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[2]/div/label/input')
+    campo_senha.send_keys(senha)
+    time.sleep(2)
 
-navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[3]/button').click()
-time.sleep(5)
+    botao_entrar = navegador.find_element('xpath', '//*[@id="loginForm"]/div/div[3]/button')
+    botao_entrar.click()
+    time.sleep(5)
 
 
 # CLICA NO BOTÃO "AGORA NÃO" DO SALVAR INFORMAÇÕES
