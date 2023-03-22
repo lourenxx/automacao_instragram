@@ -29,12 +29,15 @@ def faz_login():
 
 
 # CLICA NO BOTÃO "AGORA NÃO" DO SALVAR INFORMAÇÕES
-navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div/div/div/div').click()
-time.sleep(2)
+def diz_nao():
+    bota_diz_nao = navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div/div/div/div')
+    bota_diz_nao.click()
+    time.sleep(2)
 
-# CLICA NO BOTÃO "AGORA NÃO" DE HABILITAR NOTIFICAÇÕES
-navegador.find_element('xpath', '//div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]').click()
-time.sleep(2)
+    # CLICA NO BOTÃO "AGORA NÃO" DE HABILITAR NOTIFICAÇÕES
+    botao_diz_nao_2 = navegador.find_element('xpath', '//div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]')
+    botao_diz_nao_2.click()
+    time.sleep(2)
 
 # FUNÇÃO PARA BUSCAR AS CONTAS NA LISTA
 def buscar_conta(conta):
