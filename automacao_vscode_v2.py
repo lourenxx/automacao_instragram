@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 import time
 #from openpyxl import Workbook, load_workbook
-from recursos_externos import senha, mensagem #usuario, aba_ativa# # INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
+from recursos_externos import senha, mensagem, usuario, contas#aba_ativa# # INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
 
 servico = Service(ChromeDriverManager().install())
 navegador = webdriver.Chrome(service=servico)
@@ -87,6 +87,6 @@ faz_login(usuario, senha)
 diz_nao()
 
 # LOOP PARA BUSCAR AS RESPECTIVAS CONTAS E MENSAGEM
-for conta in aba_ativa["A"]:
+for conta in contas:
     buscar_conta(conta)
     enviar_mensagem(mensagem)

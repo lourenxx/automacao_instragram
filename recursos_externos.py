@@ -1,4 +1,4 @@
-from openpyxl import Workbook, load_workbook
+#from openpyxl import Workbook, load_workbook
 
 # Informações de Login
 senha = 'JSA18012007'
@@ -8,7 +8,7 @@ mensagem = """Olá, bom dia! Sou Guilherme Pexirile Lourenço da Colleman The Wo
 
 
 
-
+contas = []
 
 
 
