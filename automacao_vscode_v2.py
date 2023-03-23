@@ -75,7 +75,7 @@ def enviar_mensagem(mensagem):
     campo_texto.send_keys(mensagem)
     time.sleep(10)
     campo_texto.send_keys(Keys.ENTER)
-    time.sleep(120)
+    time.sleep(180)
 
     # VOLTA PRA PAGINA INICIAL PARA EXECUTAR A FUNÇÃO buscar_conta() NOVAMENTE
     pagina_inicial = navegador. find_element('xpath', '//div/div/div[1]/div/div/div/div[1]/div[1]/div/div[1]/div/div/div/div/div[2]/div[1]/div/div/a/div/div[2]/div/div')
