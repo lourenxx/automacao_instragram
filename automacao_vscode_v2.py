@@ -4,8 +4,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 import time
-#from openpyxl import Workbook, load_workbook
-from recursos_externos import senha, mensagem, usuario, contas#aba_ativa# # INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
+from openpyxl import Workbook, load_workbook
+from recursos_externos import senha, mensagem, usuario, aba_ativa # INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
 
 servico = Service(ChromeDriverManager().install())
 navegador = webdriver.Chrome(service=servico)
@@ -50,7 +50,7 @@ def buscar_conta(conta):
     
     # PESQUISA AS CONTAS PRESENTES NA LISTA
     campo_pesquisa = navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/input')
-    campo_pesquisa.send_keys(conta)
+    campo_pesquisa.send_keys(conta.value)
     time.sleep(2)
     campo_pesquisa.send_keys(Keys.ENTER)
     time.sleep(5)
@@ -87,6 +87,6 @@ faz_login(usuario, senha)
 diz_nao()
 
 # LOOP PARA BUSCAR AS RESPECTIVAS CONTAS E MENSAGEM
-for conta in contas:
+for conta in aba_ativa["A"]:
     buscar_conta(conta)
     enviar_mensagem(mensagem)
