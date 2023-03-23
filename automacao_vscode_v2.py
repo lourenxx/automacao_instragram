@@ -31,12 +31,12 @@ def faz_login(usuario, senha):
 
 # CLICA NO BOTÃO "AGORA NÃO" DO SALVAR INFORMAÇÕES
 def diz_nao():
-    bota_diz_nao = navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div/div/div/div')
+    bota_diz_nao = navegador.find_element('xpath', '//div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div/div/div/div/div')
     bota_diz_nao.click()
     time.sleep(2)
 
     # CLICA NO BOTÃO "AGORA NÃO" DE HABILITAR NOTIFICAÇÕES
-    botao_diz_nao_2 = navegador.find_element('xpath', '//div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]')
+    botao_diz_nao_2 = navegador.find_element('xpath', '//div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/button[2]')
     botao_diz_nao_2.click()
     time.sleep(2)
 
@@ -44,41 +44,41 @@ def diz_nao():
 def buscar_conta(conta):
 
     # CLICA NO BOTÃO DE PESQUISA 
-    botao_pesquisa = navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div[2]/div/a/div/div[2]/div/div')
+    botao_pesquisa = navegador.find_element('xpath', '//div/div/div[1]/div/div/div/div[1]/div[1]/div[1]/div/div/div/div/div[2]/div[2]/div/a/div/div[2]/div/div')
     botao_pesquisa.click()
     time.sleep(2)
     
     # PESQUISA AS CONTAS PRESENTES NA LISTA
-    campo_pesquisa = navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/input')
+    campo_pesquisa = navegador.find_element('xpath', '//div/div/div[1]/div/div/div/div[1]/div[1]/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/input')
     campo_pesquisa.send_keys(conta.value)
     time.sleep(2)
     campo_pesquisa.send_keys(Keys.ENTER)
     time.sleep(5)
 
     # SEGUE A CONTA
-    botao_seguir = navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/header/section/div[1]/div[1]/div/div[1]/button')
+    botao_seguir = navegador.find_element('xpath', '//div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div/header/section/div[1]/div[1]/div/div/button/div/div')
     botao_seguir.click()
     time.sleep(2)
 
     # CLICA NO BOTÃO "ENVIAR MENSAGEM" NO PERFIL
-    botao_enviar_msg = navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[2]/section/main/div/header/section/div[1]/div[1]/div/div[2]/div')
-    time.sleep(2)
+    botao_enviar_msg = navegador.find_element('xpath', '//div/div/div[1]/div/div/div/div[1]/div[1]/div[2]/section/main/div/header/section/div[1]/div[1]/div/div[2]/div')
+    time.sleep(5)
     botao_enviar_msg.click()
-    time.sleep(2)
+    time.sleep(10)
 
 
 # FUNÇÃO PARA ENVIAR A MENSAGEM 
 def enviar_mensagem(mensagem):
 
     # CLICA NO CAMPO DE TEXTO DO DIRECT E ENVIA A MSG
-    campo_texto = navegador.find_element('xpath','//div/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/section/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea')
+    campo_texto = navegador.find_element('xpath','//div/div/div[1]/div/div/div/div[1]/div[1]/div/div[2]/div/section/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/div[2]/textarea')
     campo_texto.send_keys(mensagem)
     time.sleep(10)
     campo_texto.send_keys(Keys.ENTER)
-    time.sleep(180)
+    time.sleep(120)
 
     # VOLTA PRA PAGINA INICIAL PARA EXECUTAR A FUNÇÃO buscar_conta() NOVAMENTE
-    pagina_inicial = navegador. find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div/div[2]/div/section/div/div/div/div/div[2]/div[2]/div/div[2]/div/div/div[3]/div')
+    pagina_inicial = navegador. find_element('xpath', '//div/div/div[1]/div/div/div/div[1]/div[1]/div/div[1]/div/div/div/div/div[2]/div[1]/div/div/a/div/div[2]/div/div')
     pagina_inicial.click()
     time.sleep(2)
 

@@ -1,11 +1,10 @@
 from openpyxl import Workbook, load_workbook
 
 # Informações de Login
-senha = 'JSA18012007'
-usuario = 'metamorfoseducacao'
+senha = 'Vendermuito@1005'
+usuario = 'mahinavacationclub'
 
-mensagem = """Olá, bom dia! Sou Guilherme Pexirile Lourenço da Colleman The World School. Estamos lançando uma MENTORIA 100% ONLINE sobre EDUCAÇÃO 4.0, caso haja interesse nos mande uma mensagem inbox! Fazemos valores para a divulgação da mentoria em seu perfil e com o cupom GUILHERMEDESC vc garante o valor promocional para ter acesso ao curso mais IMERSIVO sobre a nova educação no Brasil! Obrigado!"""""
-
+mensagem = """Olá! Somos da MAHINA TOUR, uma empresa de turismo. Você ama viajar? Quem não ama né! Convidamos você para seguir a nossa página e conhecer nossos vários programas de descontos. Viabilizamos de forma exclusiva a viagem dos seus sonhos, seja sozinho, em família ou com amigos! Venha conferir todas as vantagens de ser um cliente MAHINA! Esperamos por você!!"""
 
 
 contas = load_workbook("contas.xlsx")
