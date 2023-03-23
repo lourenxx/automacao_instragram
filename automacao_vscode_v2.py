@@ -50,7 +50,7 @@ def buscar_conta(conta):
     
     # PESQUISA AS CONTAS PRESENTES NA LISTA
     campo_pesquisa = navegador.find_element('xpath', '//div/div/div[2]/div/div/div/div[1]/div[1]/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/input')
-    campo_pesquisa.send_keys(conta.value)
+    campo_pesquisa.send_keys(conta)
     time.sleep(2)
     campo_pesquisa.send_keys(Keys.ENTER)
     time.sleep(5)

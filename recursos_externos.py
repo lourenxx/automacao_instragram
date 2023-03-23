@@ -1,14 +1,14 @@
 #from openpyxl import Workbook, load_workbook
 
 # Informações de Login
-senha = 'senha'
-usuario = 'nome do perfil'
+senha = 'JSA18012007'
+usuario = 'metamorfoseducacao'
 
-mensagem = """mensagem"""""
+mensagem = """teste"""""
 
 
 
-contas = ['nome do perfil', 'nome do perfil', 'nome do perfil']
+contas = ['julianabap.13', 'nome do perfil', 'nome do perfil']
 
 
 
