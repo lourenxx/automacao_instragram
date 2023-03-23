@@ -8,7 +8,11 @@ mensagem = """Olá, bom dia! Sou Guilherme Pexirile Lourenço da Colleman The Wo
 
 
 
-contas = load_workbook("contas.xlsx")
 
-aba_ativa = contas.active
+
+
+
+#contas = load_workbook("contas.xlsx")
+
+#aba_ativa = contas.active
 

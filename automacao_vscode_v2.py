@@ -4,8 +4,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 import time
-from openpyxl import Workbook, load_workbook
-from recursos_externos import senha, mensagem, usuario, aba_ativa # INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
+#from openpyxl import Workbook, load_workbook
+from recursos_externos import senha, mensagem #usuario, aba_ativa# # INFORMAÇÕES MANTIDAS EM OUTRO PROGRAMA PARA MANTER O SIGILO
 
 servico = Service(ChromeDriverManager().install())
 navegador = webdriver.Chrome(service=servico)
