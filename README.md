@@ -1,6 +1,6 @@
 # AUTOMAÇÃO PARA INSTAGRAM
 
-> Status do projeto: Operando em desenvolvimento
+> Status do projeto: Concluido
 
 Para rodar esse projeto na sua máquina, você irá precisar ter A linguagem python atualizada em seu computador
 
